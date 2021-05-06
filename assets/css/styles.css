@@ -23,11 +23,13 @@ section {
 }
 
 .logo {
+    align-items: center;
     width: 80px;
     padding: 5px;
 }
 
 footer {    
+    margin: 0 auto;
     width: 375px;
     position: fixed;
     bottom: 0;
@@ -38,4 +40,22 @@ main {
     margin-top: 255px;
 }
 
+article {
+    display: flex;
+    padding: 3px;
+}
+
+p {
+    font-size: 10px;
+}
+
+.thumb {
+    height: 70px;
+    border-radius: 4px;
+}
+
+
+.details {
+    padding: 8px 12px;
+}
 
