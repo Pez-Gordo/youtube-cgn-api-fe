@@ -12,7 +12,7 @@ $(document).ready(function() {
             console.log("ID--->",id)
             mainVid(id)
             
-            //resultsLoop(data)
+            resultsLoop(result)
         }
     })
 
@@ -23,6 +23,38 @@ $(document).ready(function() {
 
         `)
     }
+
+    function resultsLoop(result) {
+        for (var i = 0; i < result.videoData.length; i++) {
+            var videoId = result.videoData[i]._id
+            var thumb = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`
+            var title = result.videoData[i].title
+            var description = result.videoData[i].description.substring(0, 100)
+
+            $("main").append(`
+        
+                <article class="item" data-key="${videoId}">
+
+                    <img src="${thumb}" alt="" class="thumb">
+
+                    <div class="details">
+                        <h4>${title}</h4>
+                        <p>${description}</p>
+                    </div>
+
+                </article>
+
+            `)
+
+            //console.log("Identifiers-->", result.videoData[i]._id)
+        }
+    }
+
+
+    $("main").on("click", "article", function() {
+        var id = $(this).attr('data-key')
+        mainVid(id)
+    })
 
     
 })

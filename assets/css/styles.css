@@ -2,3 +2,40 @@
     margin: 0;
     padding: 0;
 }
+
+header {
+    background-color: rgb(136, 136, 136);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+section {
+    position: fixed;
+    top: 35px;
+}
+
+.container {
+    width: 375px;
+    height: 200px; 
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 80px;
+    padding: 5px;
+}
+
+footer {    
+    width: 375px;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+}
+
+main {
+    margin-top: 255px;
+}
+
+
